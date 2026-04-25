@@ -15,7 +15,8 @@ router.post('/', async (req, res) => {
     const item = new Item({
         name: req.body.name,
         description: req.body.description,
-
+        price: req.body.price,
+        serialNumber: req.body.serialNumber
     });
     try {
         const newItem = await item.save();
